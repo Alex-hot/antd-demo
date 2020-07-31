@@ -1,5 +1,11 @@
 const {
     override,
+    addLessLoader
 } = require('customize-cra')
 
-override()
+
+module.exports = override(
+    addLessLoader({
+        javascriptEnabled: true,
+    })
+)
