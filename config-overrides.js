@@ -1,7 +1,8 @@
 const {
     override,
     addLessLoader,
-    fixBabelImports
+    fixBabelImports,
+    addDecoratorsLegacy
 } = require('customize-cra')
 
 const modifyVars = require('./theme')
@@ -14,5 +15,6 @@ module.exports = override(
         libraryName: 'antd',
         libraryDirectory: 'es',
         style: true,
-    })
+    }),
+    addDecoratorsLegacy()
 )
